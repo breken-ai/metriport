@@ -25,7 +25,7 @@
    <a href="https://github.com/metriport/metriport/stargazers"><img src="https://img.shields.io/github/stars/metriport/metriport" alt="GitHub Stars"></a>
       <a href="https://www.linkedin.com/company/metriport"><img src="https://img.shields.io/static/v1?label=LinkedIn&message=Metriport%20%28YC%20S22%29&color=blue" alt="LinkedIn"></a>
    <a href="https://www.ycombinator.com/companies/metriport"><img src="https://img.shields.io/static/v1?label=Y%20Combinator&message=Metriport&color=orange" alt="YC"></a>
-      <a href="https://x.com/metriport"><img src="https://img.shields.io/twitter/follow/metriport?style=social"></a>
+      <a href="https://x.com/metriport"><img src="https://img.shields.io/twitter/follow/metriport?style=social" alt="Follow Metriport on X"></a>
   <a href="https://github.com/metriport/metriport/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
 </p>
 
