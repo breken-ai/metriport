@@ -1,22 +1,21 @@
 <p align="center">
   <a href="https://github.com/metriport/metriport">
-    <img src="./assets/logo.png" alt="Logo">
+    <img src="./assets/main-banner.png" alt="Logo">
   </a>
 
   <p align="center">
-    Metriport helps healthcare organizations access comprehensive patient medical data, through an
-    open-source universal API.
+    Complete real-time patient context from every source that matters, transformed into relevant intelligence for your care teams and their AI agents.
     <br />
     <a href="https://metriport.com" target="_blank"><strong>Learn more »</strong></a>
     <br />
     <br />
     <a href="https://docs.metriport.com/" target="_blank">Docs</a>
     ·
-    <a href="https://www.npmjs.com/package/@metriport/api-sdk" target="_blank">NPM</a>
-    ·
-    <a href="https://dash.metriport.com" target="_blank">Developer Dashboard</a>
-    ·
     <a href="https://metriport.com" target="_blank">Website</a>
+    ·
+    <a href="https://dash.metriport.com" target="_blank">Dashboard</a>
+    ·
+    <a href="https://www.npmjs.com/package/@metriport/api-sdk" target="_blank">NPM</a>
 
   </p>
 </p>
@@ -24,70 +23,133 @@
 <p align="center">
    <a href="https://status.metriport.com/"><img src="https://api.checklyhq.com/v1/badges/checks/6aee48de-8699-4746-8843-80e28366ccb0?style=flat&theme=default" alt="API Status Check"></a>
    <a href="https://github.com/metriport/metriport/stargazers"><img src="https://img.shields.io/github/stars/metriport/metriport" alt="GitHub Stars"></a>
-   <a href="https://github.com/metriport/metriport/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
-   <a href="https://github.com/metriport/metriport/pulse"><img src="https://img.shields.io/github/commit-activity/m/metriport/metriport" alt="Commits-per-month"></a>
-   <a href="https://twitter.com/metriport"><img src="https://img.shields.io/twitter/follow/metriport?style=social"></a>
-   <a href="https://www.linkedin.com/company/metriport"><img src="https://img.shields.io/static/v1?label=LinkedIn&message=Metriport (YC S22)&color=blue" alt="LinkedIn"></a>
+      <a href="https://www.linkedin.com/company/metriport"><img src="https://img.shields.io/static/v1?label=LinkedIn&message=Metriport (YC S22)&color=blue" alt="LinkedIn"></a>
    <a href="https://www.ycombinator.com/companies/metriport"><img src="https://img.shields.io/static/v1?label=Y Combinator&message=Metriport&color=orange" alt="YC"></a>
+      <a href="https://twitter.com/metriport"><img src="https://img.shields.io/twitter/follow/metriport?style=social"></a>
+  <a href="https://github.com/metriport/metriport/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
 </p>
-
-### **[Join us on our Slack Community](https://join.slack.com/t/metriport-oss/shared_invite/zt-2jezazysw-~AuXop_rFmWQXKmjYRr~cA) 💬**
 
 ## **Overview**
 
-<div>
-    <a href="https://www.loom.com/share/c5c049d2f0444e1ea8e075640077a77f">
-      <p>Check out our platform demo:</p>
-    </a>
-    <a href="https://www.loom.com/share/c5c049d2f0444e1ea8e075640077a77f">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/c5c049d2f0444e1ea8e075640077a77f-with-play.gif">
-    </a>
-  </div>
+Metriport provides real-time access to medical data for 340+ million individuals across the US. Its open-source platform turns scattered patient records across all major healthcare IT systems into structured information that gives clinicians what they need, exactly when they need it, to provide the best possible care.
+
+Metriport manages dozens of connections across all national HIEs and QHINs, state and regional HIEs, ADT networks, pharmacies, labs, and EHRs. It then matches, extracts, standardizes, deduplicates, and enriches records, and converts them into a unified data model, accessible through a single API, data warehouse, or apps directly within an EHR.
+
+In addition to providing longitudinal patient clinical data at the point of care, Metriport offers ambient monitoring, alerting providers in real time as patients are moved through the healthcare system to assist with transitions of care. Metriport also delivers insights on top of the data, like AI medical record summarization, condition suspecting, and surfacing care gaps.
+
+Founded in 2022 and headquartered in San Francisco, Metriport processes 4.2 billion network requests a month and returns the first structured record in under 15 seconds. Teams across care delivery, value-based programs, and health tech platforms build on Metriport, including Amazon One Medical, Strive Health, Color, Sollis Health, and Canvas Medical.
 
 ## **Security and Privacy**
 
-Metriport is SOC 2 and HIPAA compliant. [Click here](https://security.metriport.com/) to learn more about our security practices.
+Metriport is HITRUST r2 certified, SOC 2 Type 2 certified, and HIPAA compliant. [Visit our trust center](https://security.metriport.com/) to learn more about our security practices.
 
 <p style="text-align: center;">
+  <img src="./assets/hitrust.png" width="25%" />
   <img src="./assets/soc2.png" width="20%" />
   <img src="./assets/hipaa.png" width="30%" />
 </p>
 
-### **Medical API**
+## **Platform**
 
-<div align="center">
-   <img width="90%" alt="open source healthcare data api" src="./assets/medical-api.png">
-</div>
+Metriport connects to every major source of patient data, harmonizes it into a single record, and delivers it wherever your team works - through an API, a data warehouse, apps inside your EHR, or as ready-made clinical insights.
 
-Our [Medical API](https://www.metriport.com/medical) brings you data from the largest clinical data networks in the country - one open-source API, 300+ million patients.
+### **Integrations**
 
-Metriport ensures clinical accuracy and completeness of medical information, with HL7 FHIR, C-CDA, and PDF formats supported. Through standardizing, de-duplicating, consolidating, and hydrating data with medical code crosswalking, Metriport delivers rich and comprehensive patient data at the point-of-care.
+#### **[HIE Networks](https://www.metriport.com/networks/hie-networks)**
 
-### **Medical Dashboard**
+<img src="./assets/platform/hie-networks.png" alt="A single Network Query fanning out to Carequality, CommonWell, eHealth Exchange, and TEFCA/QHINs, plus a map of state and regional HIE coverage" width="100%" />
 
-<div align="center">
-   <img width="90%" alt="open source healthcare data dashboard" src="./assets/medical-dashboard.png">
-</div>
+A single Network Query reaches all four national networks - TEFCA/QHINs, Carequality, CommonWell, and eHealth Exchange.
 
-Our [Medical Dashboard](https://www.metriport.com/dashboard) enables providers to streamline their patient record retrieval process. Get up and running within minutes, accessing the largest health information networks in the country through a user-friendly interface.
+#### **[ADT Networks](https://www.metriport.com/networks/adt-networks)**
 
-Tools like our FHIR explorer and PDF converter help you make sense of the data you need to make relevant care decisions and improve patient outcomes.
+<img src="./assets/platform/adt-networks.png" alt="Admit, transfer, and discharge events from Bamboo Health, Healthix, and PointClickCare plotted along a patient's path from home to the emergency department to inpatient and back home" width="100%" />
 
-### **Converter API**
+Enroll a patient once and their admissions, transfers, and discharges are pushed as they happen, from the national ADT networks (Bamboo Health, PointClickCare) and from state and regional HIEs.
 
-<div align="center">
-   <img width="90%" alt="convert c-cda to fhir" src="./assets/fhir-converter.png">
-</div>
+#### **[Pharmacies & Labs](https://www.metriport.com/networks/pharmacies-labs)**
 
-A key piece to achieving true interoperability is compatibility between different data formats. Using advanced processing techniques, Metriport's [FHIR Converter](https://www.metriport.com/fhir-converter) takes common healthcare data formats such as C-CDA, and converts them into FHIR R4 to streamline data exchange.
+<img src="./assets/platform/pharmacies-labs.png" alt="Surescripts, PBM networks, cash-pay pharmacies, HIEs, and Quest feeding into an RxNorm-coded medication list and LOINC-coded lab results" width="100%" />
 
-Get started converting using our [Quickstart Guide](https://docs.metriport.com/converter-api/getting-started/quickstart).
+Medication fill history & notifications from Surescripts and PBM networks, reconciled onto the record you already query. Lab history & notifications from Quest.
+
+#### **[EHRs](https://www.metriport.com/networks/ehrs)**
+
+<img src="./assets/platform/ehrs.png" alt="Your EHR syncing conditions, medications, allergies, and results into Metriport, with outside records written back into the chart" width="100%" />
+
+Turnkey bi-directional connections to most major EHRs that reconcile internal chart data with everything retrieved from outside it into one interactive longitudinal record.
+
+### **Unified Data Platform**
+
+#### **[Harmonization Engine](https://www.metriport.com/platform/harmonization-engine)**
+
+<img src="./assets/platform/harmonization-engine.png" alt="C-CDA, HL7v2, and scanned PDF inputs passing through harmonization and coming out as a single FHIR R4 bundle" width="100%" />
+
+Work with structured data that’s clean, standardized, and actionable - no matter the format at its source.
+
+#### **[API](https://www.metriport.com/platform/api)**
+
+<img src="./assets/platform/api.png" alt="Your app calling Metriport and receiving consolidated FHIR, webhook events, and ADT feed payloads" width="100%" />
+
+Integrate Metriport into any workflow with a universal FHIR-native API.
+
+#### **[Data Warehouse](https://www.metriport.com/platform/data-warehouse)**
+
+<img src="./assets/platform/data-warehouse.png" alt="C-CDA, FHIR R4, HL7v2, and documents flattened into normalized clinical tables, one table per FHIR resource type" width="100%" />
+
+Run analytical queries via a single unified flattened schema applied across all of your data.
+
+### **Applications**
+
+#### **[Ambient Monitoring & TCM](https://www.metriport.com/applications/ambient-monitoring-tcm)**
+
+<img src="./assets/platform/ambient-monitoring-tcm.png" alt="A patient.discharge event leading to a retrieved patient encounter bundle and same-day follow-up outreach with the discharge summary attached" width="100%" />
+
+Real-time admission, transfer, and discharge events for enrolled patients, with the discharge summary retrieved automatically. The webhook lands in your care-management system with the encounter record already attached, so transition-of-care follow-up starts from context instead of from a search.
+
+#### **[EHR Apps](https://www.metriport.com/applications/ehr-apps)**
+
+<img src="./assets/platform/ehr-apps.png" alt="The Metriport app embedded in an athenahealth chart, showing an AI summary and external medication history with its source network per line" width="100%" />
+
+External patient history rendered inside the chart your clinicians already have open, in EHRs like Epic, athenaOne, Practice Fusion, and Canvas.
+
+#### **[Dashboard & iFrame](https://www.metriport.com/applications/dashboard-iframe)**
+
+<img src="./assets/platform/dashboard-iframe.png" alt="Patient View rendered inside a host application through an embed iframe" width="100%" />
+
+Use our apps standalone, or bake them into your homegrown EHR.
+
+#### **[Messaging](https://www.metriport.com/applications/messaging)**
+
+<img src="./assets/platform/messaging.png" alt="An outbound message carrying a cardiology referral with attachments, routed to another practitioner or to a public health agency as a case report" width="100%" />
+
+Send and receive referrals to other providers, and send electronic case reports to public health agencies.
+
+### **Insights and Analytics**
+
+#### **[Medical Record Summaries](https://www.metriport.com/analytics/medical-record-summaries)**
+
+<img src="./assets/platform/medical-record-summaries.png" alt="A stack of documents summarized into a single AI brief paragraph" width="100%" />
+
+Get an AI summary of the patient information most pertinent to you - thousands of records in a single customizable paragraph.
+
+#### **[Condition Suspecting & Recapture](https://www.metriport.com/analytics/condition-suspecting)**
+
+<img src="./assets/platform/condition-suspecting.png" alt="Observations and medication requests from a longitudinal record producing unconfirmed suspected conditions with ICD-10 codes for review" width="100%" />
+
+Discover conditions that should be presently diagnosed, but are not, based on a patient’s longitudinal medical record.
+
+#### **[Care Gap Identification](https://www.metriport.com/analytics/care-gap-identification)**
+
+<img src="./assets/platform/care-gap-identification.png" alt="A list of open and closed HEDIS measures alongside a MeasureReport showing the population math and the observation that satisfies the numerator" width="100%" />
+
+Find proof of open and closed care gaps with an NCQA certified HEDIS engine.
 
 ## **Getting Started**
 
-Check out the links below to get started with Metriport in minutes!
+Check out the links below to get started with Metriport:
 
-### **[Slack Community](https://join.slack.com/t/metriport-oss/shared_invite/zt-2jezazysw-~AuXop_rFmWQXKmjYRr~cA) 💬**
+### **[Book a Demo](https://www.metriport.com/contact) 📞**
 
 ### **[Quickstart Guide](https://docs.metriport.com/medical-api/getting-started/quickstart) 🚀**
 
@@ -97,19 +159,13 @@ Check out the links below to get started with Metriport in minutes!
 
 ## **Repo Rundown**
 
-### **API Server**
+### **API**
 
-Backend for the Metriport API.
+Backend for the Metriport platform.
 
 - Dir: [`/packages/api`](/packages/api)
 - URL: [https://api.metriport.com/](https://api.metriport.com/)
 - Sandbox URL: [https://api.sandbox.metriport.com/](https://api.sandbox.metriport.com/)
-
-### **FHIR Converter**
-
-Engine to convert various healthcara data formats to FHIR, and back.
-
-- Dir: [`/packages/fhir-converter`](/packages/fhir-converter)
 
 ### **Infrastructure as Code**
 
@@ -123,16 +179,6 @@ Our beautiful developer documentation, powered by [mintlify](https://mintlify.co
 
 - Dir: [`/docs`](/docs)
 - URL: [https://docs.metriport.com/](https://docs.metriport.com/getting-started/introduction)
-
-### **Packages**
-
-#### **npm**
-
-Our npm packages are available in [`/packages`](/packages):
-
-- [Metriport API](/packages/api-sdk/): contains the Metriport data models, and a convenient API client wrapper.
-- [CommonWell JWT Maker](/packages/commonwell-jwt-maker/): CLI to create a JWT for use in [CommonWell](https://www.commonwellalliance.org/) queries.
-- [CommonWell SDK](/packages/commonwell-sdk/): SDK to simplify CommonWell API integration.
 
 ---
 
