@@ -11,7 +11,10 @@ import duration from "dayjs/plugin/duration";
 import { Request, Response } from "express";
 import Router from "express-promise-router";
 import httpStatus from "http-status";
-import { createPatient, PatientCreateCmd } from "../../command/medical/patient/create-patient";
+import {
+  createPatientIfNotExists,
+  PatientCreateCmd,
+} from "../../command/medical/patient/create-patient";
 import {
   getPatientByExternalId,
   getPatientOrFail,
@@ -51,7 +54,8 @@ const router = Router();
  * customer's organization if it doesn't exist already.
  *
  * @param  req.query.facilityId The ID of the Facility the Patient should be associated with.
- * @return The newly created patient.
+ * @return 201 with the newly created patient, or 200 with the existing patient when the
+ *         demographics already match one (previously always 201 - see #2172).
  */
 router.post(
   "/",
@@ -85,7 +89,7 @@ router.post(
       facilityId,
     };
 
-    const patient = await createPatient({
+    const { patient, wasCreated } = await createPatientIfNotExists({
       patient: patientCreate,
       rerunPdOnNewDemographics,
       forceCommonwell,
@@ -98,7 +102,9 @@ router.post(
       await createSampleTcmEncounters(cxId, patient.id);
     }
 
-    return res.status(httpStatus.CREATED).json(dtoFromModel(patient));
+    // 201 when a new patient was created, 200 when the demographics matched an existing one -
+    // so callers can tell a silent dedupe apart from an actual creation (fixes #2172)
+    return res.status(wasCreated ? httpStatus.CREATED : httpStatus.OK).json(dtoFromModel(patient));
   })
 );
 
