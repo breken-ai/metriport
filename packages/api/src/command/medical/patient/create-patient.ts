@@ -24,7 +24,17 @@ type Identifier = Pick<Patient, "cxId" | "externalId"> & { facilityId: string };
 type PatientNoExternalData = Omit<PatientData, "externalData">;
 export type PatientCreateCmd = PatientNoExternalData & Identifier;
 
-export async function createPatient({
+export type CreatePatientResult = {
+  patient: PatientWithIdentifiers;
+  /** false when the demographics matched an existing patient and nothing was created */
+  wasCreated: boolean;
+};
+
+/**
+ * Creates the patient if no patient with matching demographics exists for the customer,
+ * otherwise returns the existing patient. `wasCreated` tells callers which one happened.
+ */
+export async function createPatientIfNotExists({
   patient,
   runPd = true,
   rerunPdOnNewDemographics,
@@ -59,7 +69,7 @@ export async function createPatient({
   };
 
   const patientExists = await getPatientByDemo({ cxId, demo });
-  if (patientExists) return patientExists;
+  if (patientExists) return { patient: patientExists, wasCreated: false };
 
   // validate facility exists and cx has access to it
   await getFacilityOrFail({ cxId, id: facilityId });
@@ -130,5 +140,22 @@ export async function createPatient({
     }).catch(processAsyncError("runInitialPatientDiscoveryAcrossHies"));
   }
   const patientWithIdentifiers = await attachPatientIdentifiers(newPatient.dataValues);
-  return patientWithIdentifiers;
+  return { patient: patientWithIdentifiers, wasCreated: true };
+}
+
+/**
+ * Creates the patient if it doesn't exist yet, returning the (possibly pre-existing) patient.
+ * Use createPatientIfNotExists when the caller needs to know whether a patient was created.
+ */
+export async function createPatient(params: {
+  patient: PatientCreateCmd;
+  runPd?: boolean;
+  rerunPdOnNewDemographics?: boolean;
+  forceCommonwell?: boolean;
+  forceCarequality?: boolean;
+  settings?: PatientSettingsData;
+  cohortIds?: string[];
+}): Promise<PatientWithIdentifiers> {
+  const { patient } = await createPatientIfNotExists(params);
+  return patient;
 }
