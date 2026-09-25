@@ -8,7 +8,9 @@ jest.mock("../match-patients", () => ({
   matchingPersonalIdentifiersRule: jest.fn(),
   matchPatients: (_similarity: unknown, _rules: unknown, patients: { id: string }[]) => patients,
 }));
-jest.mock("../shared", () => ({ patientToPatientMPI: (patient: { id: string }) => ({ id: patient.id }) }));
+jest.mock("../shared", () => ({
+  patientToPatientMPI: (patient: { id: string }) => ({ id: patient.id }),
+}));
 jest.mock("../../util/log", () => ({ log: jest.fn() }));
 
 describe("getPatientByDemo", () => {
@@ -17,7 +19,9 @@ describe("getPatientByDemo", () => {
     const older = { id: "older", createdAt: new Date("2024-01-01T00:00:00.900Z") };
     const patientLoader = {
       findBySimilarity: jest.fn().mockResolvedValue([newer, older]),
-      getOneOrFail: jest.fn().mockImplementation(({ id }) => Promise.resolve(id === older.id ? older : newer)),
+      getOneOrFail: jest
+        .fn()
+        .mockImplementation(({ id }) => Promise.resolve(id === older.id ? older : newer)),
     } as unknown as PatientLoader;
 
     const result = await getPatientByDemo({
