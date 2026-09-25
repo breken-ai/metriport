@@ -9,7 +9,10 @@ describe("ServiceRequest CDA template", () => {
     helpers.forEach(helper => handlebars.registerHelper(helper.name, helper.func));
     handlebars.registerPartial("ValueSet/RequestStatus.hbs", '"active"');
     handlebars.registerPartial("DataType/CodeableConcept.hbs", '{"text":"Example"}');
-    const templatePath = path.join(__dirname, "../../../templates/cda/Resources/ServiceRequest.hbs");
+    const templatePath = path.join(
+      __dirname,
+      "../../../templates/cda/Resources/ServiceRequest.hbs"
+    );
     const template = handlebars.compile(fs.readFileSync(templatePath, "utf8"));
 
     const rendered = template({
